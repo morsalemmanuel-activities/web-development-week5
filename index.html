@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SpendWise</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <h1>SpendWise</h1>
+      <p>Build your financial foundation</p>
+    </header>
+
+    <main class="container">
+      <section class="card">
+        <h2>Monthly Budget Planner</h2>
+
+        <form id="budgetForm">
+          <div class="field">
+            <label for="monthlyBudget">Monthly Budget</label>
+            <input
+              type="number"
+              id="monthlyBudget"
+              min="0"
+              step="0.01"
+              placeholder="2500"
+              required
+            />
+          </div>
+
+          <div class="field">
+            <label for="rent">Rent</label>
+            <input type="number" id="rent" min="0" step="0.01" placeholder="850" required />
+          </div>
+
+          <div class="field">
+            <label for="groceries">Groceries</label>
+            <input type="number" id="groceries" min="0" step="0.01" placeholder="300" required />
+          </div>
+
+          <div class="field">
+            <label for="transport">Transport</label>
+            <input type="number" id="transport" min="0" step="0.01" placeholder="150" required />
+          </div>
+
+          <div class="field">
+            <label for="entertainment">Entertainment</label>
+            <input
+              type="number"
+              id="entertainment"
+              min="0"
+              step="0.01"
+              placeholder="200"
+              required
+            />
+          </div>
+
+          <button type="submit">Calculate Budget</button>
+        </form>
+
+        <section class="summary">
+          <h3>Budget Summary</h3>
+          <table class="budget-table">
+            <thead>
+              <tr>
+                <th>Category</th>
+                <th>Amount</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Monthly Budget</td>
+                <td id="monthlyBudgetValue">$0.00</td>
+              </tr>
+              <tr>
+                <td>Rent</td>
+                <td id="rentValue">$0.00</td>
+              </tr>
+              <tr>
+                <td>Groceries</td>
+                <td id="groceriesValue">$0.00</td>
+              </tr>
+              <tr>
+                <td>Transport</td>
+                <td id="transportValue">$0.00</td>
+              </tr>
+              <tr>
+                <td>Entertainment</td>
+                <td id="entertainmentValue">$0.00</td>
+              </tr>
+              <tr class="total-row">
+                <td>Total Expenses</td>
+                <td id="totalExpenses">$0.00</td>
+              </tr>
+              <tr class="total-row">
+                <td>Remaining Balance</td>
+                <td id="remainingBalance">$0.00</td>
+              </tr>
+              <tr>
+                <td>Status</td>
+                <td id="budgetStatus">Not calculated yet</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
